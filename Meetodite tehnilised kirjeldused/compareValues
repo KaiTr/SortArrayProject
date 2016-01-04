@@ -1,0 +1,10 @@
+Compare two integer inputs. Returns boolean
+
+
+Public boolean compareValues(int Sisend1, int Sisend2){
+bool x
+if Sisend1 > Sisend2 then x=true else x=false;
+return x;
+
+
+}
