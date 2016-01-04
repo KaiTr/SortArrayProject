@@ -1,1 +1,26 @@
 Git project for bit-array sorting
+
+Programm loeb tekstifailist sisse bitimassiivi.
+
+Boonusena kaasa meetod, mis genereerib selle ise.
+
+Sisend : programm loeb 
+
+Sisend: C:\sisend.txt
+
+Väljund: C:\valjund.txt
+
+Testimiseks on sisend 10x10 massiiv. Sisend luuakse meetodiga createBitArray-optional
+
+Sisseloetud massiiv sorteeritakse nn. plussmeetodil? St kõige enam ühtesid 
+sisaldav rida on kõige esimene, järgmiselt teine ühtesid sisaldav rida on järgnev, 
+kõige vähem ühtesid sisaldav rida on kõige viimane. 
+Kõige rohkem ühtesid sisaldav veerg on esimene, ühtesid järgmisena 
+sisaldav veerg on järgmine ja ühtesid kõige vähem sisaldav veerg on kõige 
+viimane.
+ 
+
+
+
+
+

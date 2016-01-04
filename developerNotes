@@ -1,0 +1,19 @@
+Siia kirjutan selle, mida mul arenduseks tarvis on
+
+Sammud
+1. Lugeda fail sisse ja panna massiivi
+2. Sorteerida
+3. KIrjutada välja
+
+1. Vaja teada loodava massiivi suurus
+	Kaks varianti : 1)lugeda ära read, lugeda ära veerud, teha massiiv
+					2)hakata kohe lugema massiivi, mis on alguses 1x1, 
+					suurendada massiivi sisselugemise käigus, redimensioneerida
+					3)lugeda bitte sisse listi, kollektsiooni vms, mis ei nüua 
+					kohest mõõtmete määramist
+
+
+
+
+
+
