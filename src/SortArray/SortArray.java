@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 
 /**
  * @author KaiTr
@@ -26,9 +28,23 @@ public class SortArray {
 	public static void main(String[] args) throws FileNotFoundException{
 		
 		int[][] inputArray= new int[10][10];
+		int[][] outputArray= new int[10][10];
+		int[][] rowSumArray= new int[10][3];
+		int[][] colSumArray= new int[3][10];
+		
+		System.out.println("Reading input from : 'C:/workplace/SortArrayProject/ExampleInput'");
 		inputArray = readArrayFromFile();
-		countRowSum(inputArray);
-		countColSum(inputArray);		
+		
+		System.out.println("Calculating Row SUM");
+		rowSumArray = countRowSum(inputArray);
+		
+		System.out.println("Calculating Column SUM");
+		colSumArray = countColSum(inputArray);	
+		
+		System.out.println("Writing result out");
+		if(writeOut(outputArray)){
+			System.out.println("Check output : C:/esimene/output.txt'");
+		}
 		
 	}
 	
@@ -123,5 +139,44 @@ public class SortArray {
 			e.printStackTrace();
 		} 
 		return intArray;			
+	}
+	
+	/**
+	 * @param outputArray
+	 * 
+	 * <pre>
+	 * Input is sorted Array.
+	 * Writing Array into textfile.
+	 * Destination: 'C:/esimene/output.txt'
+	 * </pre>
+	 */
+	public static boolean writeOut(int [][] outputArray){
+				
+		PrintWriter writer;
+		
+		try {
+			writer = new PrintWriter("C:/esimene/output.txt", "UTF-8");
+			String outputRow="";
+			for(int i = 0; i < 10; i++) {
+				for(int j = 0; j < 10; j++) {
+					outputRow=outputRow + outputArray[i][j];
+				}	
+				
+				writer.println(outputRow);
+				outputRow="";
+			}
+
+			writer.close();
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Destianation file : 'C:/esimene/output.txt' is missing");
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Encoding : 'UTF-8' is unsupported");
+			e.printStackTrace();
+		}
+		return true;
+
+			
 	}
 }
