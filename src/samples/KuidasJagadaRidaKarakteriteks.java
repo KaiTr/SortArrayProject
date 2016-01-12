@@ -1,3 +1,4 @@
+package samples;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,13 +9,13 @@ public class KuidasJagadaRidaKarakteriteks {
 		BufferedReader br = null;
 		try {
 			String sCurrentLine;
-			String lõplik = "Vastus: ";
+//			String loplik = "Vastus: ";
 			String rida = "Rida ";
 			String koolon = " : ";
 			char otsitavMark = 0;
-			int TaisArv = 0;
-			int TeineArv = 6;
-			int Vastus = 0;
+//			int TaisArv = 0;
+//			int TeineArv = 6;
+//			int Vastus = 0;
 			int reanumber = 0;
 			int otsitavRida = 2;
 			int otsitavaMargiNumber = 5;			
@@ -36,8 +37,8 @@ public class KuidasJagadaRidaKarakteriteks {
 				/*TaisArv = Integer.parseInt(sCurrentLine);
 				Vastus = TaisArv + TeineArv;				
 				System.out.println(sCurrentLine);
-				System.out.println(lõplik + Vastus);
-				System.out.print(lõplik);
+				System.out.println(loplik+ Vastus);
+				System.out.print(loplik);
 				System.out.print(Vastus);*/								
 				}
 			System.out.println(otsitavMark);			

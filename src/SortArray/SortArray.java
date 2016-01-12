@@ -5,20 +5,38 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * @author KaiTr
+ * 
+ * 
+ *
+ */
 public class SortArray {
 
+	/**
+	 * @param args
+	 * @throws FileNotFoundException
+	 */
 	public static void main(String[] args) throws FileNotFoundException{
 		
 		int[][] inputArray= new int[10][10];
 		inputArray = readArrayFromFile();
 		countRowSum(inputArray);
-		countColSum(inputArray);
-		
+		countColSum(inputArray);		
 		
 	}
+	
+	/**
+	 * @param inputArray
+	 * @return rowSumArray int[10][3]
+	 * 
+	 * current row-number, start row-number, row-sum
+	 * 
+	 * Sum of "1" elements in input-array per row
+	 */
 	public static int [][] countRowSum(int [][] inputArray) {
 		
-		//loen yhtede arvu igas reas
+		
 		int[][] rowSumArray= new int[10][3];
 		int summa = 0;
 		
@@ -33,9 +51,18 @@ public class SortArray {
 		}
 		return rowSumArray;		
 	}
+	
+	/**
+	 * @param inputArray
+	 * @return colSumArray int[3][10]
+	 * 
+	 * current column-number, start column-number, column-sum
+	 * 
+	 * Sum of "1" elements in input-array per column
+	 */
 	public static int [][] countColSum(int [][] inputArray) {
 		
-		//loen yhtede arvu igas veerus
+
 		int[][] colSumArray= new int[3][10];
 		int summa = 0;
 		
@@ -49,16 +76,22 @@ public class SortArray {
 			summa = 0;
 			
 		}	
-//		System.out.print(colSumArray[2][8]);
-		return colSumArray;
-		
-		
-		 
-		
+
+		return colSumArray;	
+		 		
 	}
+	
+	/**
+	 * @return intArray
+	 * @throws FileNotFoundException
+	 * 
+	 * Opens file from constant location : "C:/workplace/SortArrayProject/ExampleInput"
+	 * read all chars (1/0) into int-array
+	 * 
+	 */
 	public static int[][] readArrayFromFile() throws FileNotFoundException{
 		
-		//m‰‰ran massiivi mııtmed
+
 		int[][] intArray = new int[10][10];
 		
 		try {
@@ -74,6 +107,7 @@ public class SortArray {
 				j = j + 1;
 				
 			}
+			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
