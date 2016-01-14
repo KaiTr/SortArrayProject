@@ -23,6 +23,7 @@ public class SortArray {
 	 * {@link #countRowSum(int [][] inputArray)}
 	 * {@link #countColSum(int [][] inputArray)}
 	 * {@link #readArrayFromFile()}
+	 * 
 	 * </pre>
 	 */
 	public static void main(String[] args) throws FileNotFoundException{
@@ -63,7 +64,11 @@ public class SortArray {
 	 * @param rowSortArray
 	 * @param colSortArray
 	 * @param inputArray
-	 * @return
+	 * @return outputArray
+	 * 
+	 * <pre>
+	 * Ehitab väljaminevat massiivi
+	 * </pre>
 	 */
 	public static int[][] buildOutputArray(int [][] rowSortArray,int [][] colSortArray, int [][] inputArray){
 		
@@ -101,7 +106,12 @@ public class SortArray {
 	/**
 	 * @param intBasic
 	 * @param intToCompare
-	 * @return
+	 * @return x
+	 * 
+	 * <pre>
+	 * Võrdlen kahte sisendina saadud täisarvu, tagastab TRUE juhul kui esimesena sisseantud 
+	 * täisarv on suurem kui teisena sisseantud täisarv 
+	 * <p/re>
 	 */
 	public static boolean compareInt (int intBasic, int intToCompare){
 		boolean x = false;
@@ -115,7 +125,11 @@ public class SortArray {
 	/**
 	 * @param rowNumber
 	 * @param sArray
-	 * @return
+	 * @return sArray
+	 * 
+	 * <pre>
+	 * 
+	 * <pre>
 	 */
 	public static int[][] upperRecursionRow(int rowNumber, int [][] sArray){
 
@@ -136,7 +150,11 @@ public class SortArray {
 	/**
 	 * @param colNumber
 	 * @param sArray
-	 * @return
+	 * @return sArray
+	 * 
+	 * <pre>
+	 * 
+	 * <pre>
 	 */
 	public static int[][] upperRecursionCol(int colNumber, int [][] sArray){
 		
@@ -157,7 +175,11 @@ public class SortArray {
 	 * @param startRow
 	 * @param endRow
 	 * @param sArray
-	 * @return
+	 * @return sArray
+	 * 
+	 * <pre>
+	 * 
+	 * <pre>
 	 */
 	public static int [][] switchRows(int startRow, int endRow, int [][] sArray){
 		int z = 0;
@@ -176,7 +198,11 @@ public class SortArray {
 	 * @param startCol
 	 * @param endCol
 	 * @param sArray
-	 * @return
+	 * @return sArray
+	 * 
+	 * <pre>
+	 * 
+	 * <pre>
 	 */
 	public static int [][] switchCols(int startCol, int endCol, int [][] sArray){
 		int z = 0;
@@ -193,7 +219,13 @@ public class SortArray {
 	} 
 	/**
 	 * @param rowSumArray
-	 * @return
+	 * @return rowSumArray
+	 * 
+	 * <pre>
+	 * Looping rows SUM Array
+	 * Tsükeldab ridade summade massiivi
+	 * Algatab väärtuste järjestamist suurimast summast vähemani
+	 * </pre>
 	 */
 	public static int [][] sortRow (int [][] rowSumArray){
 		int row1 = 0;
@@ -218,7 +250,13 @@ public class SortArray {
 	
 	/**
 	 * @param colSumArray
-	 * @return
+	 * @return colSumArray
+	 * 
+	 * <pre>
+	 * Looping columns SUM Array
+	 * Tsükeldab veergude summade massiivi
+	 * Algatab väärtuste järjestamist suurimast summast vähemani
+	 * </pre>
 	 */
 	public static int [][] sortCol (int [][] colSumArray){
 		int col1 = 0;
@@ -354,19 +392,31 @@ public class SortArray {
 		try {
 			writer = new PrintWriter("C:/esimene/output.txt", "UTF-8");
 			String outputRow="";
+			System.out.println(" ");
+			System.out.println("TÄNAN! ");
+			System.out.println(" ");
+			System.out.println("Kai Trumm ");
+			System.out.println(" ");
+			System.out.println("Tulemus: ");
+			writer.println("autor: Kai Trumm");
+			writer.println("");
+
+
 			for(int i = 0; i < 10; i++) {
 				for(int j = 0; j < 10; j++) {
 					outputRow=outputRow + outputArray[i][j];
 				}	
 
 				writer.println(outputRow);
+				System.out.println(outputRow);
+
 				outputRow="";
 			}
 
 			writer.close();
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("Destianation file : 'C:/esimene/output.txt' is missing");
+			System.out.println("Destination file : 'C:/esimene/output.txt' is missing");
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
 			System.out.println("Encoding : 'UTF-8' is unsupported");
